@@ -70,6 +70,7 @@ const StoreListPage = () => {
       </div>
     );
   }
+  console.log(stores?.pages)
 
   return (
 

@@ -3,9 +3,7 @@ import Layout from '../components/Layout'
 import '../styles/globals.css';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { SessionProvider } from 'next-auth/react'
-import wrapper, { persistor, store } from '../store';
-import { PersistGate } from "redux-persist/integration/react";
-import { Provider } from 'react-redux';
+import wrapper from '../store';
 
 const queryClient = new QueryClient()
 
