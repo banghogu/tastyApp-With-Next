@@ -7,10 +7,10 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 const prisma = new PrismaClient()
 
 export const authOptions = {
-  session:{
-    strategy:'jwt',
+  session: {
+    strategy: 'jwt',
     maxAge: 60 * 60 * 24,
-    updateAge:60 * 60 * 2,
+    updateAge: 60 * 60 * 2,
   },
   adapter: PrismaAdapter(prisma),
   providers: [
@@ -19,8 +19,8 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
   ],
-  pages:{
-    signIn:'/users/login'
+  pages: {
+    signIn: '/users/login'
   }
 };
 
